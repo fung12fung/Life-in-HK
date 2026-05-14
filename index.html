@@ -278,7 +278,6 @@ body {
 <body>
 
 <header class="site-header">
-  <!-- Bauhinia SVG logo -->
   <svg class="logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
     <circle cx="20" cy="20" r="20" fill="#CE1126"/>
     <g fill="white">
@@ -500,10 +499,10 @@ const Qs = [
     ans: [2]
   },
   {
-    t: '「飲茶」喺廣東話入面嘅字面意思係乜嘢？',
+    t: '香港人話「去飲茶」，通常係指去做乜？',
     type: 'single',
-    opts: ['食點心', '食早餐', '飲茶', '觸動心靈'],
-    ans: [2]
+    opts: ['去買靚茶葉', '去茶樓食點心', '喺屋企泡功夫茶', '去茶藝班學習'],
+    ans: [1]
   },
   {
     t: '香港最長嘅遠足徑叫乜嘢名？全長約100公里，穿越新界。',
@@ -552,7 +551,7 @@ function render() {
   const saved = chosen[cur];
 
   document.getElementById('q-counter').textContent =
-    '第 ' + (cur + 1) + ' 題，共 ' + n + ' 題';
+    '第 ' + (cur + 1) + ' 題，共 ' + n + ' 題';
   document.getElementById('prog').style.width = ((cur + 1) / n * 100) + '%';
 
   const prev = document.getElementById('btn-prev');
@@ -611,7 +610,7 @@ function prevQ() { if (cur > 0) { cur--; render(); } }
 function confirmSubmit() {
   const unanswered = chosen.filter(a => a === null).length;
   if (unanswered > 0) {
-    if (!confirm('仲有 ' + unanswered + ' 題未答。確定提交？')) return;
+    if (!confirm('仲有 ' + unanswered + ' 題未答。確定提交？')) return;
   }
   submitTest();
 }
@@ -639,7 +638,7 @@ function submitTest() {
   document.getElementById('r-pct').textContent = pct + '%';
   document.getElementById('r-msg').textContent = pass
     ? '恭喜你！繼續保持。'
-    : '今次差少少！需要答對 ' + PASS + ' 題或以上先合格，加油！';
+    : '今次差少少！需要答對 ' + PASS + ' 題或以上先合格，加油！';
 
   const revHTML = Qs.map((q, i) => {
     const a = chosen[i];
@@ -657,7 +656,7 @@ function submitTest() {
       yourTxt = q.type === 'single' ? q.opts[a] : a.map(ai => q.opts[ai]).join(' 及 ');
     }
     return '<div class="rv-item ' + cls + '">' +
-      '<div class="rv-num"><span>第 ' + (i + 1) + ' 題</span>' +
+      '<div class="rv-num"><span>第 ' + (i + 1) + ' 題</span>' +
       '<span class="rv-icon">' + icon + '</span></div>' +
       '<div class="rv-q">' + q.t + '</div>' +
       '<div class="rv-ans">' +
