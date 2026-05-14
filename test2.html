@@ -6,15 +6,8 @@
 <title>香港生活測驗 Test 2 — 文化常識篇</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Noto Sans HK', 'PingFang HK', 'Microsoft JhengHei', system-ui, sans-serif;
-  background: #f4f6fa; color: #222; min-height: 100vh;
-}
-.site-header {
-  background: #1a4a1a; color: #fff; padding: 0 20px;
-  display: flex; align-items: center; gap: 14px; height: 64px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.25);
-}
+body { font-family: 'Noto Sans HK', 'PingFang HK', 'Microsoft JhengHei', system-ui, sans-serif; background: #f4f6fa; color: #222; min-height: 100vh; }
+.site-header { background: #1a4a1a; color: #fff; padding: 0 20px; display: flex; align-items: center; gap: 14px; height: 64px; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
 .site-header .logo { width: 40px; height: 40px; flex-shrink: 0; }
 .site-header .hdr-text h1 { font-size: 1.1rem; font-weight: 700; }
 .site-header .hdr-text p  { font-size: .8rem; opacity: .8; margin-top: 2px; }
@@ -30,51 +23,31 @@ body {
 .info-box .lbl { font-size: .8rem; color: #666; margin-top: 4px; }
 .note { color: #555; font-size: .88rem; margin-bottom: 28px; }
 .note strong { color: #1a4a1a; }
-.btn-start {
-  background: #1a4a1a; color: #fff; border: none; padding: 16px 52px;
-  font-size: 1.05rem; border-radius: 8px; cursor: pointer; font-weight: 700; transition: background .2s;
-}
+.btn-start { background: #1a4a1a; color: #fff; border: none; padding: 16px 52px; font-size: 1.05rem; border-radius: 8px; cursor: pointer; font-weight: 700; transition: background .2s; }
 .btn-start:hover { background: #2a6a2a; }
-.back-link { display: block; margin-top: 18px; font-size: .85rem; color: #1a4a1a; font-weight: 600; text-decoration: none; }
-.back-link:hover { text-decoration: underline; }
+.other-test { margin-top: 18px; font-size: .85rem; }
+.other-test a { color: #1a4a1a; font-weight: 600; text-decoration: none; }
+.other-test a:hover { text-decoration: underline; }
 .quiz-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .q-counter { font-size: .9rem; color: #555; font-weight: 500; }
-.timer {
-  background: #1a4a1a; color: #fff; padding: 5px 14px; border-radius: 20px;
-  font-size: .9rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 68px; text-align: center;
-}
+.timer { background: #1a4a1a; color: #fff; padding: 5px 14px; border-radius: 20px; font-size: .9rem; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 68px; text-align: center; }
 .timer.warn { background: #c0392b; animation: pulse 1s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.7} }
 .progress-wrap { background: #e8e8e8; border-radius: 4px; height: 6px; margin-bottom: 22px; overflow: hidden; }
 .progress-fill { background: #1a4a1a; height: 100%; border-radius: 4px; transition: width .35s ease; }
 .q-card { margin-bottom: 20px; }
-.q-type-badge {
-  display: inline-block; background: #e8f5e8; color: #1a4a1a;
-  font-size: .78rem; font-weight: 600; padding: 3px 11px; border-radius: 20px; margin-bottom: 14px;
-}
+.q-type-badge { display: inline-block; background: #e8f5e8; color: #1a4a1a; font-size: .78rem; font-weight: 600; padding: 3px 11px; border-radius: 20px; margin-bottom: 14px; }
 .q-text { font-size: 1.1rem; font-weight: 600; color: #111; line-height: 1.55; margin-bottom: 22px; }
 .options-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.opt-item label {
-  display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px;
-  border: 2px solid #ddd; border-radius: 8px; cursor: pointer;
-  transition: border-color .15s, background .15s; font-size: .95rem; line-height: 1.45; user-select: none;
-}
+.opt-item label { display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; transition: border-color .15s, background .15s; font-size: .95rem; line-height: 1.45; user-select: none; }
 .opt-item label:hover { border-color: #1a4a1a; background: #f0fff0; }
-.opt-item input[type=radio], .opt-item input[type=checkbox] {
-  margin-top: 2px; flex-shrink: 0; width: 18px; height: 18px; accent-color: #1a4a1a; cursor: pointer;
-}
+.opt-item input[type=radio], .opt-item input[type=checkbox] { margin-top: 2px; flex-shrink: 0; width: 18px; height: 18px; accent-color: #1a4a1a; cursor: pointer; }
 .opt-item.sel label { border-color: #1a4a1a; background: #e8f5e8; }
 .nav-row { display: flex; gap: 12px; align-items: center; }
-.btn-nav {
-  background: #fff; color: #1a4a1a; border: 2px solid #1a4a1a; padding: 11px 24px;
-  border-radius: 7px; cursor: pointer; font-size: .95rem; font-weight: 600; transition: all .15s; white-space: nowrap;
-}
+.btn-nav { background: #fff; color: #1a4a1a; border: 2px solid #1a4a1a; padding: 11px 24px; border-radius: 7px; cursor: pointer; font-size: .95rem; font-weight: 600; transition: all .15s; white-space: nowrap; }
 .btn-nav:hover:not(:disabled) { background: #1a4a1a; color: #fff; }
 .btn-nav:disabled { opacity: .38; cursor: not-allowed; }
-.btn-submit {
-  background: #1a5a8a; color: #fff; border: 2px solid #1a5a8a; padding: 11px 26px;
-  border-radius: 7px; cursor: pointer; font-size: .95rem; font-weight: 700; margin-left: auto; transition: background .15s; white-space: nowrap;
-}
+.btn-submit { background: #1a5a8a; color: #fff; border: 2px solid #1a5a8a; padding: 11px 26px; border-radius: 7px; cursor: pointer; font-size: .95rem; font-weight: 700; margin-left: auto; transition: background .15s; white-space: nowrap; }
 .btn-submit:hover { background: #164a74; }
 .result-card { text-align: center; margin-bottom: 24px; }
 .result-badge { display: inline-block; padding: 10px 36px; border-radius: 30px; font-size: 1.35rem; font-weight: 700; margin-bottom: 18px; }
@@ -96,6 +69,7 @@ body {
 .rv-ans { font-size: .87rem; }
 .rv-your { color: #dc3545; } .rv-your.ok { color: #28a745; }
 .rv-correct { color: #28a745; margin-top: 3px; }
+.rv-exp { color: #666; font-size: .82rem; margin-top: 7px; padding-top: 7px; border-top: 1px dashed #ddd; }
 @media (max-width: 560px) {
   .card { padding: 24px 18px; } .start-card h2 { font-size: 1.5rem; }
   .q-text { font-size: 1rem; } .btn-nav, .btn-submit { padding: 10px 16px; font-size: .88rem; }
@@ -106,31 +80,25 @@ body {
 <header class="site-header">
   <svg class="logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
     <circle cx="20" cy="20" r="20" fill="#1a4a1a"/>
-    <text x="20" y="26" text-anchor="middle" font-size="18" fill="white" font-family="serif">香</text>
+    <text x="20" y="27" text-anchor="middle" font-size="20" fill="white" font-family="serif">港</text>
   </svg>
-  <div class="hdr-text">
-    <h1>香港生活測驗 — Test 2</h1>
-    <p>文化常識篇 · 得唔得閒先？</p>
-  </div>
+  <div class="hdr-text"><h1>香港生活測驗 — Test 2</h1><p>文化常識篇 · 識唔識先？</p></div>
 </header>
-
 <div class="container">
-
   <div id="s-start" class="screen active">
     <div class="card start-card">
       <h2>文化常識篇</h2>
-      <p class="sub">考吓你係唔係真正嘅香港人<br>唔識唔緊要，考完學到嘢就得</p>
+      <p class="sub">考吓你係唔係真正嘅香港人<br>做錯咗會有解釋，學完再嚟過</p>
       <div class="info-grid">
         <div class="info-box"><div class="num">23</div><div class="lbl">條題目</div></div>
         <div class="info-box"><div class="num">30</div><div class="lbl">分鐘限時</div></div>
         <div class="info-box"><div class="num">75%</div><div class="lbl">合格線</div></div>
       </div>
-      <p class="note">答對 <strong>17 題或以上</strong>即係合格。識唔識？</p>
+      <p class="note">答對 <strong>17 題或以上</strong>即係合格。識唔識先？</p>
       <button class="btn-start" onclick="startTest()">挑戰 Test 2 →</button>
-      <a class="back-link" href="index.html">← 返去 Test 1</a>
+      <p class="other-test"><a href="index.html">← 返去 Test 1（歷史政府篇）</a></p>
     </div>
   </div>
-
   <div id="s-quiz" class="screen">
     <div class="quiz-meta">
       <span class="q-counter" id="q-counter">第 1 題，共 23 題</span>
@@ -144,7 +112,6 @@ body {
       <button class="btn-submit" id="btn-submit" onclick="confirmSubmit()" style="display:none">提交測驗 ✓</button>
     </div>
   </div>
-
   <div id="s-result" class="screen">
     <div class="card result-card">
       <div class="result-badge" id="r-badge">合格</div>
@@ -152,271 +119,96 @@ body {
       <div class="result-pct" id="r-pct">73.9%</div>
       <div class="result-msg" id="r-msg"></div>
       <button class="btn-retry" onclick="retryTest()">再試一次 ↺</button>
-      <a class="back-link" href="index.html">← 返去 Test 1</a>
+      <p class="other-test" style="margin-top:14px"><a href="index.html">← 返去 Test 1</a></p>
     </div>
-    <div class="review-section">
-      <h3>詳細答案回顧</h3>
-      <div id="review"></div>
-    </div>
+    <div class="review-section"><h3>詳細答案回顧</h3><div id="review"></div></div>
   </div>
-
 </div>
-
 <script>
-const PASS = 17;
-const SECS = 30 * 60;
-
-const Qs = [
-  {
-    t: '麥當勞喺香港最出名嘅花名係？',
-    type: 'single',
-    opts: ['麥記', 'M記', '金拱門', '麥麥'],
-    ans: [0]
-  },
-  {
-    t: '7-Eleven 喺香港最出名嘅花名係？',
-    type: 'single',
-    opts: ['七仔', '十一哥', '十一仔', '七爺'],
-    ans: [0]
-  },
-  {
-    t: '「啟德」兩個字，係分別紀念邊兩位名人？（請選兩個）',
-    type: 'multi',
-    opts: ['何啟', '區德', '劉鑄伯', '鄧志昂'],
-    ans: [0, 1]
-  },
-  {
-    t: '地鐵同九廣鐵路係幾年正式合併，成為今日嘅「港鐵」？',
-    type: 'single',
-    opts: ['2004年', '2007年', '2009年', '2011年'],
-    ans: [1]
-  },
-  {
-    t: '1972年紅磡海底隧道通車當日，第一個駕車通過嘅係邊位？',
-    type: 'single',
-    opts: ['港督麥理浩', '財政司夏鼎基', '工務局局長', '一位普通市民'],
-    ans: [0]
-  },
-  {
-    t: '1967年香港左派暴動嘅導火線係？',
-    type: 'single',
-    opts: ['天星小輪加價', '新蒲崗人造花廠工潮', '颱風引發大規模罷工', '警察貪污醜聞'],
-    ans: [1]
-  },
-  {
-    t: '1998年啟德機場閉幕典禮，司儀講完最後一句後全場靜默。嗰句係？',
-    type: 'single',
-    opts: [
-      '「各位旅客，多謝光臨，晚安。」',
-      '「再見，啟德！香港人加油！」',
-      '「啟德，就係咁喇。多謝。」',
-      '「Goodbye Kai Tak, hello future.」'
-    ],
-    ans: [0]
-  },
-  {
-    t: '青馬大橋係連接邊三個地方？',
-    type: 'single',
-    opts: [
-      '青衣、馬灣、大嶼山',
-      '青衣、昂船洲、大嶼山',
-      '馬灣、荃灣、大嶼山',
-      '青衣、馬灣、屯門'
-    ],
-    ans: [0]
-  },
-  {
-    t: '香港90年代有間晶片廠，係當年本地高科技工業嘅代表，呢間廠叫咩名？',
-    type: 'single',
-    opts: ['晶技半導體', '香港矽谷科技', '太平洋半導體', '亞洲集成電路'],
-    ans: [0]
-  },
-  {
-    t: '香港人叫英女皇伊利沙伯二世做乜花名？',
-    type: 'single',
-    opts: ['事頭婆', '女王娘娘', '靚太', '老細娘'],
-    ans: [0]
-  },
-  {
-    t: '香港電車點解叫「叮叮」？',
-    type: 'single',
-    opts: [
-      '電車公司創辦人嘅花名叫叮叮',
-      '電車行駛時會響叮叮聲警示行人',
-      '叮叮係英文 tram 嘅廣東話音譯',
-      '因為電車車廂形狀似叮噹'
-    ],
-    ans: [1]
-  },
-  {
-    t: '「東方之珠」係邊位音樂人嘅作品？',
-    type: 'single',
-    opts: ['梅艷芳', '張學友', '羅大佑', '譚詠麟'],
-    ans: [2]
-  },
-  {
-    t: '1997年香港回歸，最後載走英國官員離港嘅皇家遊輪叫乜嘢名？',
-    type: 'single',
-    opts: ['不列顛尼亞號', '伊利沙伯號', '維多利亞號', '愛丁堡號'],
-    ans: [0]
-  },
-  {
-    t: '香港的士共有幾多種車身顏色，分別對應唔同服務地區？',
-    type: 'single',
-    opts: ['1種', '2種', '3種', '4種'],
-    ans: [2]
-  },
-  {
-    t: '「煲呔曾」係香港人對邊位行政長官嘅花名？',
-    type: 'single',
-    opts: ['董建華', '曾蔭權', '梁振英', '林鄭月娥'],
-    ans: [1]
-  },
-  {
-    t: '香港幾年爆發「沙士」（SARS）疫情？',
-    type: 'single',
-    opts: ['2001年', '2003年', '2005年', '2007年'],
-    ans: [1]
-  },
-  {
-    t: '旺角「女人街」嘅正式街名係？',
-    type: 'single',
-    opts: ['砵蘭街', '通菜街', '西洋菜南街', '花園街'],
-    ans: [1]
-  },
-  {
-    t: '香港八達通（Octopus Card）係幾年正式推出？',
-    type: 'single',
-    opts: ['1994年', '1997年', '2000年', '2003年'],
-    ans: [1]
-  },
-  {
-    t: '「獅子山下」呢首名曲係邊位歌手演唱？',
-    type: 'single',
-    opts: ['許冠傑', '鄭少秋', '羅文', '葉振棠'],
-    ans: [2]
-  },
-  {
-    t: '香港著名功夫巨星李小龍係幾歲離世？',
-    type: 'single',
-    opts: ['28歲', '30歲', '32歲', '35歲'],
-    ans: [2]
-  },
-  {
-    t: '香港人叫「OK便利店」，係指邊間連鎖品牌？',
-    type: 'single',
-    opts: ['FamilyMart', 'Circle K', 'Spar', 'Wellcome'],
-    ans: [1]
-  },
-  {
-    t: '廟街夜市係香港著名旅遊景點，位於哪個地區？',
-    type: 'single',
-    opts: ['旺角', '深水埗', '油麻地', '尖沙咀'],
-    ans: [2]
-  },
-  {
-    t: '香港著名街頭小食，用特製圓形鐵模烤製，外形似一粒粒雞蛋，叫做？',
-    type: 'single',
-    opts: ['格仔餅', '雞蛋仔', '砵仔糕', '煎堆'],
-    ans: [1]
-  }
+const PASS=17, SECS=30*60;
+const Qs=[
+  { t:'麥當勞喺香港最出名嘅花名係？', type:'single', opts:['麥記','M記','金拱門','麥麥'], ans:[0], exp:'「麥記」係廣東話對麥當勞嘅親切叫法，「記」字係廣東話代表店鋪嘅字，如「茶記」（茶餐廳）同用法。' },
+  { t:'7-Eleven 喺香港最出名嘅花名係？', type:'single', opts:['七仔','十一哥','十一仔','七爺'], ans:[0], exp:'「七仔」係7-Eleven嘅花名，「七」取自廣東話「7」嘅讀音，「仔」係香港話常用嘅親切後綴。' },
+  { t:'「啟德」兩個字係分別紀念邊兩位名人？（請選兩個）', type:'multi', opts:['何啟','區德','劉鑄伯','鄧志昂'], ans:[0,1], exp:'啟德機場以兩位本地紳商命名：何啟爵士（1859–1914）同區德先生，佢哋曾捐地發展九龍城一帶。' },
+  { t:'地鐵同九廣鐵路係幾年正式合併，成為「港鐵」？', type:'single', opts:['2004年','2007年','2009年','2011年'], ans:[1], exp:'九廣鐵路公司同香港地鐵公司於2007年12月2日正式合併，統稱「港鐵」（MTR），由港鐵公司（0066.HK）營運。' },
+  { t:'1972年紅磡海底隧道通車，第一個駕車通過嘅係邊位？', type:'single', opts:['港督麥理浩','財政司夏鼎基','工務局局長','一位普通市民'], ans:[0], exp:'紅磡海底隧道於1972年8月2日正式通車，港督麥理浩爵士主持開幕儀式並首先駕車通過隧道。' },
+  { t:'1967年香港左派暴動嘅導火線係？', type:'single', opts:['天星小輪加價','新蒲崗人造花廠工潮','颱風導致大規模罷工','廉署打貪事件'], ans:[1], exp:'1967年5月，新蒲崗人造花廠勞資糾紛引發警民衝突，在文化大革命影響下迅速演變成六七暴動。' },
+  { t:'1998年啟德機場閉幕典禮，司儀講完最後一句後全場靜默。嗰句係？', type:'single', opts:['「各位旅客，晚安。」','「再見，啟德！唔捨得你！」','「啟德，就係咁。多謝。」','「Goodbye Kai Tak, hello future.」'], ans:[0], exp:'啟德機場於1998年7月6日正式關閉，閉幕典禮上司儀嘅最後一句成為香港人嘅集體回憶。' },
+  { t:'青馬大橋係連接邊三個地方？', type:'single', opts:['青衣、馬灣、大嶼山','青衣、昂船洲、大嶼山','馬灣、荃灣、大嶼山','青衣、馬灣、屯門'], ans:[0], exp:'青馬大橋連接青衣島、馬灣同大嶼山，係世界上其中一條最長嘅行車鐵路兩用懸索橋，1997年啟用。' },
+  { t:'香港90年代有間晶片廠，係當時本地高科技工業嘅代表，呢間廠叫咩名？', type:'single', opts:['晶技半導體','香港矽谷','太平洋半導體','晶科有限公司'], ans:[0], exp:'香港90年代積極發展高科技工業，但礙於地價高企同製造業北移，相關嘗試最終難以持續。' },
+  { t:'香港人叫英女皇伊利沙伯二世做乜花名？', type:'single', opts:['事頭婆','女王娘娘','老闆娘','靚太'], ans:[0], exp:'「事頭婆」係廣東話「老闆娘」嘅意思，香港人用嚟稱呼英女皇，因為佢係香港名義上嘅最高統治者。' },
+  { t:'香港電車點解會叫「叮叮」？', type:'single', opts:['電車公司創辦人叫叮叮','電車行駛時響起叮叮聲提示行人','叮叮係英文 tram 嘅音譯','因為電車車廂形狀似叮噹'], ans:[1], exp:'電車司機行駛時會按響電鈴（叮叮聲）警示路人，市民因此親切地叫電車做「叮叮」，流傳至今。' },
+  { t:'「東方之珠」係邊位音樂人嘅作品？', type:'single', opts:['梅艷芳','張學友','羅大佑','譚詠麟'], ans:[2], exp:'「東方之珠」係台灣音樂人羅大佑1983年創作，歌詞描述香港嘅魅力，後成為香港嘅代表歌曲之一。' },
+  { t:'1997年香港回歸後，最後載走英國官員離港嘅皇家遊輪叫乜嘢名？', type:'single', opts:['不列顛尼亞號','伊利沙伯號','維多利亞號','聖母峰號'], ans:[0], exp:'不列顛尼亞號（HMY Britannia）於1997年7月1日凌晨載走末代港督彭定康及查理斯王子離港，象徵英治終結。' },
+  { t:'香港的士共有幾多種車身顏色？', type:'single', opts:['1種','2種','3種','4種'], ans:[2], exp:'紅色的士（市區）、綠色的士（新界）、藍色的士（大嶼山），三種顏色代表唔同服務地區，收費各異。' },
+  { t:'「煲呔曾」係香港人對邊位行政長官嘅花名？', type:'single', opts:['董建華','曾蔭權','梁振英','林鄭月娥'], ans:[1], exp:'曾蔭權係香港第二任行政長官，以鍾情佩戴煲呔（蝴蝶結領帶）聞名，因此獲「煲呔曾」嘅花名。' },
+  { t:'香港幾年爆發「沙士」（SARS）疫情？', type:'single', opts:['2001年','2003年','2005年','2007年'], ans:[1], exp:'2003年沙士疫情奪去香港約300條人命，淘大花園係最嚴重嘅社區爆發點，全港戴口罩成為習慣。' },
+  { t:'旺角「女人街」嘅正式街名係？', type:'single', opts:['砵蘭街','通菜街','西洋菜南街','花園街'], ans:[1], exp:'旺角通菜街因集中大量平價女裝攤檔而被稱為「女人街」，係著名旅遊購物景點。' },
+  { t:'香港八達通係幾年正式推出？', type:'single', opts:['1994年','1997年','2000年','2003年'], ans:[1], exp:'八達通於1997年9月1日正式推出，係全球最早推行嘅非接觸式智能卡交通系統之一，後擴展至零售消費。' },
+  { t:'「獅子山下」係邊位歌手演唱？', type:'single', opts:['許冠傑','鄭少秋','羅文','葉振棠'], ans:[2], exp:'羅文（1949–2002）演唱「獅子山下」，原為1970年代電視劇主題曲，後成為香港精神嘅象徵。' },
+  { t:'香港著名功夫巨星李小龍係幾歲離世？', type:'single', opts:['28歲','30歲','32歲','35歲'], ans:[2], exp:'李小龍生於1940年11月27日，1973年7月20日在香港猝逝，享年32歲，死因至今仍有爭議。' },
+  { t:'香港人叫「OK便利店」，係指邊間連鎖便利店？', type:'single', opts:['FamilyMart','Circle K','Spar','Wellcome'], ans:[1], exp:'Circle K喺香港以「OK便利店」著稱，「OK」取自其品牌標誌，係繼7-Eleven後嘅第二大連鎖便利店。' },
+  { t:'廟街夜市位於哪個地區？', type:'single', opts:['旺角','深水埗','油麻地','尖沙咀'], ans:[2], exp:'廟街夜市位於油麻地，以大牌檔、算命攤、廉價商品及街頭表演著稱，係香港著名夜間旅遊景點。' },
+  { t:'香港著名街頭小食，用特製圓形鐵模烤製，外形似一粒粒雞蛋，叫做？', type:'single', opts:['格仔餅','雞蛋仔','砵仔糕','煎堆'], ans:[1], exp:'雞蛋仔係香港獨有嘅街頭美食，1950年代起源，用雞蛋、麵粉及糖烤成，係香港飲食文化嘅標誌。' }
 ];
-
-let cur = 0, chosen = Qs.map(() => null), secs = SECS, ticker = null;
-
-function show(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
-function startTest() {
-  cur = 0; chosen = Qs.map(() => null); secs = SECS;
-  show('s-quiz'); render();
-  clearInterval(ticker);
-  ticker = setInterval(() => { secs--; tickTimer(); if (secs <= 0) { clearInterval(ticker); submitTest(); } }, 1000);
-}
-
-function tickTimer() {
-  const el = document.getElementById('timer');
-  el.textContent = String(Math.floor(secs/60)).padStart(2,'0') + ':' + String(secs%60).padStart(2,'0');
-  el.classList.toggle('warn', secs <= 300);
-}
-
-function render() {
-  const q = Qs[cur], n = Qs.length, isMulti = q.type === 'multi', saved = chosen[cur];
-  document.getElementById('q-counter').textContent = '第 ' + (cur+1) + ' 題，共 ' + n + ' 題';
-  document.getElementById('prog').style.width = ((cur+1)/n*100) + '%';
-  document.getElementById('btn-prev').disabled = cur === 0;
-  const isLast = cur === n-1;
-  document.getElementById('btn-next').style.display = isLast ? 'none' : 'inline-block';
-  document.getElementById('btn-submit').style.display = isLast ? 'inline-block' : 'none';
-  const optHTML = q.opts.map((o,i) => {
-    const isSel = saved !== null ? (isMulti ? saved.includes(i) : saved === i) : false;
-    return '<li class="opt-item'+(isSel?' sel':'')+'"><label>'+
-      '<input type="'+(isMulti?'checkbox':'radio')+'" name="q" value="'+i+'"'+(isSel?' checked':'')+' onchange="pick('+i+')">'+
-      o+'</label></li>';
+let cur=0,chosen=Qs.map(()=>null),secs=SECS,ticker=null;
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+function startTest(){cur=0;chosen=Qs.map(()=>null);secs=SECS;show('s-quiz');render();clearInterval(ticker);ticker=setInterval(()=>{secs--;tickTimer();if(secs<=0){clearInterval(ticker);submitTest();}},1000);}
+function tickTimer(){const el=document.getElementById('timer');el.textContent=String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0');el.classList.toggle('warn',secs<=300);}
+function render(){
+  const q=Qs[cur],n=Qs.length,isMulti=q.type==='multi',saved=chosen[cur];
+  document.getElementById('q-counter').textContent='第 '+(cur+1)+' 題，共 '+n+' 題';
+  document.getElementById('prog').style.width=((cur+1)/n*100)+'%';
+  document.getElementById('btn-prev').disabled=cur===0;
+  const isLast=cur===n-1;
+  document.getElementById('btn-next').style.display=isLast?'none':'inline-block';
+  document.getElementById('btn-submit').style.display=isLast?'inline-block':'none';
+  const optHTML=q.opts.map((o,i)=>{
+    const isSel=saved!==null?(isMulti?saved.includes(i):saved===i):false;
+    return '<li class="opt-item'+(isSel?' sel':'')+'"><label><input type="'+(isMulti?'checkbox':'radio')+'" name="q" value="'+i+'"'+(isSel?' checked':'')+' onchange="pick('+i+')">'+o+'</label></li>';
   }).join('');
-  document.getElementById('q-card').innerHTML =
-    '<div class="q-type-badge">'+(isMulti?'☑ 選兩個答案':'◉ 選一個答案')+'</div>'+
-    '<div class="q-text">'+q.t+'</div><ul class="options-list">'+optHTML+'</ul>';
+  document.getElementById('q-card').innerHTML='<div class="q-type-badge">'+(isMulti?'☑ 選兩個答案':'◉ 選一個答案')+'</div><div class="q-text">'+q.t+'</div><ul class="options-list">'+optHTML+'</ul>';
 }
-
-function pick(i) {
-  const q = Qs[cur];
-  if (q.type === 'single') {
-    chosen[cur] = i;
-    document.querySelectorAll('.opt-item').forEach((el,idx) => el.classList.toggle('sel', idx===i));
-  } else {
-    const sel = Array.from(document.querySelectorAll('input[name=q]')).reduce((a,cb,idx) => { if(cb.checked) a.push(idx); return a; }, []);
-    if (sel.length > 2) { document.querySelector('input[name=q][value="'+i+'"]').checked = false; return; }
-    chosen[cur] = sel.length ? sel : null;
-    document.querySelectorAll('.opt-item').forEach((el,idx) => el.classList.toggle('sel', sel.includes(idx)));
+function pick(i){
+  const q=Qs[cur];
+  if(q.type==='single'){chosen[cur]=i;document.querySelectorAll('.opt-item').forEach((el,idx)=>el.classList.toggle('sel',idx===i));}
+  else{
+    const sel=Array.from(document.querySelectorAll('input[name=q]')).reduce((a,cb,idx)=>{if(cb.checked)a.push(idx);return a;},[]);
+    if(sel.length>2){document.querySelector('input[name=q][value="'+i+'"]').checked=false;return;}
+    chosen[cur]=sel.length?sel:null;
+    document.querySelectorAll('.opt-item').forEach((el,idx)=>el.classList.toggle('sel',sel.includes(idx)));
   }
 }
-
-function nextQ() { if (cur < Qs.length-1) { cur++; render(); } }
-function prevQ() { if (cur > 0) { cur--; render(); } }
-
-function confirmSubmit() {
-  const u = chosen.filter(a => a===null).length;
-  if (u > 0 && !confirm('仲有 '+u+' 題未答。確定提交？')) return;
-  submitTest();
-}
-
-function submitTest() {
+function nextQ(){if(cur<Qs.length-1){cur++;render();}}
+function prevQ(){if(cur>0){cur--;render();}}
+function confirmSubmit(){const u=chosen.filter(a=>a===null).length;if(u>0&&!confirm('仲有 '+u+' 題未答。確定提交？'))return;submitTest();}
+function submitTest(){
   clearInterval(ticker);
-  let score = 0;
-  Qs.forEach((q,i) => {
-    const a = chosen[i]; if (a===null) return;
-    if (q.type==='single') { if (a===q.ans[0]) score++; }
-    else { if (JSON.stringify([...a].sort())===JSON.stringify([...q.ans].sort())) score++; }
-  });
-  const pct = Math.round(score/Qs.length*100), pass = score >= PASS;
-  const badge = document.getElementById('r-badge');
-  badge.textContent = pass ? '✓ 合格！' : '✗ 唔合格';
-  badge.className = 'result-badge '+(pass?'pass':'fail');
-  document.getElementById('r-score').textContent = score+' / '+Qs.length;
-  document.getElementById('r-pct').textContent = pct+'%';
-  document.getElementById('r-msg').textContent = pass
-    ? '你係真正嘅香港人！'
-    : '今次差少少！需要答對 '+PASS+' 題或以上先合格，加油！';
-  document.getElementById('review').innerHTML = Qs.map((q,i) => {
-    const a = chosen[i];
-    let ok = false;
-    if (a!==null) ok = q.type==='single' ? a===q.ans[0] : JSON.stringify([...a].sort())===JSON.stringify([...q.ans].sort());
-    const cls = a===null?'skip':(ok?'ok':'bad'), icon = a===null?'—':(ok?'✓':'✗');
-    const correctTxt = q.ans.map(ci=>q.opts[ci]).join(' 及 ');
-    const yourTxt = a===null?'未作答':(q.type==='single'?q.opts[a]:a.map(ai=>q.opts[ai]).join(' 及 '));
-    return '<div class="rv-item '+cls+'"><div class="rv-num"><span>第 '+(i+1)+' 題</span><span class="rv-icon">'+icon+'</span></div>'+
-      '<div class="rv-q">'+q.t+'</div><div class="rv-ans">'+
-      '<div class="rv-your'+(ok?' ok':'')+'">你嘅答案：'+yourTxt+'</div>'+
-      (!ok?'<div class="rv-correct">正確答案：'+correctTxt+'</div>':'')+
-      '</div></div>';
+  let score=0;
+  Qs.forEach((q,i)=>{const a=chosen[i];if(a===null)return;if(q.type==='single'){if(a===q.ans[0])score++;}else{if(JSON.stringify([...a].sort())===JSON.stringify([...q.ans].sort()))score++;}});
+  const pct=Math.round(score/Qs.length*100),pass=score>=PASS;
+  const badge=document.getElementById('r-badge');
+  badge.textContent=pass?'✓ 合格！':'✗ 唔合格';
+  badge.className='result-badge '+(pass?'pass':'fail');
+  document.getElementById('r-score').textContent=score+' / '+Qs.length;
+  document.getElementById('r-pct').textContent=pct+'%';
+  document.getElementById('r-msg').textContent=pass?'你係真正嘅香港人！':'今次差少少！需要答對 '+PASS+' 題或以上先合格，加油！';
+  document.getElementById('review').innerHTML=Qs.map((q,i)=>{
+    const a=chosen[i];let ok=false;
+    if(a!==null)ok=q.type==='single'?a===q.ans[0]:JSON.stringify([...a].sort())===JSON.stringify([...q.ans].sort());
+    const cls=a===null?'skip':(ok?'ok':'bad'),icon=a===null?'—':(ok?'✓':'✗');
+    const correctTxt=q.ans.map(ci=>q.opts[ci]).join(' 及 ');
+    const yourTxt=a===null?'未作答':(q.type==='single'?q.opts[a]:a.map(ai=>q.opts[ai]).join(' 及 '));
+    return '<div class="rv-item '+cls+'"><div class="rv-num"><span>第 '+(i+1)+' 題</span><span class="rv-icon">'+icon+'</span></div>'
+      +'<div class="rv-q">'+q.t+'</div><div class="rv-ans">'
+      +'<div class="rv-your'+(ok?' ok':'')+'">你嘅答案：'+yourTxt+'</div>'
+      +(!ok?'<div class="rv-correct">正確答案：'+correctTxt+'</div>':'')
+      +(!ok?'<div class="rv-exp">💡 '+q.exp+'</div>':'')
+      +'</div></div>';
   }).join('');
-  show('s-result'); window.scrollTo(0,0);
+  show('s-result');window.scrollTo(0,0);
 }
-
-function retryTest() { show('s-start'); }
+function retryTest(){show('s-start');}
 </script>
 </body>
 </html>
